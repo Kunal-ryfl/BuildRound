@@ -1,6 +1,6 @@
 # Java Multi-Project Repository
 
-This repository contains **two separate Java projects**, each demonstrating different concepts in Java programming. Both projects exist inside this root folder as independent modules.
+This repository contains **two separate Java projects**, each demonstrating different concepts in Java programming. Both projects exist inside this root folder as independent modules.Each project has its own `README.md` for detailed instructions.
 
 ---
 
