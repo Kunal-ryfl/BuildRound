@@ -27,8 +27,5 @@ public class App {
         // Start both threads
         producer.start();
         consumer.start();
-
-        // Optional: In real applications, you might join threads or stop them gracefully
-        // Here, they will run indefinitely demonstrating the producer-consumer pattern
     }
 }
