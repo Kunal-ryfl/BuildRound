@@ -1,0 +1,10 @@
+orderId,product,category,quantity,price
+1,Laptop,Electronics,2,60000
+2,Mouse,Electronics,5,800
+3,Shirt,Clothing,3,1200
+4,Laptop,Electronics,1,60000
+5,Pants,Clothing,2,1500
+6,Keyboard,Electronics,3,2000
+7,Shirt,Clothing,1,1200
+8,Watch,Accessories,2,5000
+9,Belt,Accessories,1,800
