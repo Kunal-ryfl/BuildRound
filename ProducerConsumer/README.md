@@ -47,7 +47,7 @@ App.main()
 ````
 5. Run unit tests from ProducerConsumerTest.java.
 
-## Sample Output
+## Sample Output and Screenshots
 ````
 Producer → Source → 1
 Producer → Queue: 1
@@ -59,3 +59,6 @@ Consumer ← Queue: 2
 Consumer ← Destination: 2
 ...
 ````
+<img width="1327" height="832" alt="image" src="https://github.com/user-attachments/assets/4e6e5063-242a-41b7-bf4b-b019867cc7d8" />
+
+<img width="970" height="509" alt="image" src="https://github.com/user-attachments/assets/f0c7182d-2b7c-4286-8097-75ff3530fdcd" />
