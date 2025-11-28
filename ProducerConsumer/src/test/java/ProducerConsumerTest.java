@@ -1,4 +1,4 @@
-package ProducerConsumer.src.test;
+package ProducerConsumer.src.test.java;
 
 import ProducerConsumer.src.main.java.Consumer;
 import ProducerConsumer.src.main.java.Producer;

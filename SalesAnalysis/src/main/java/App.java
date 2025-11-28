@@ -28,15 +28,21 @@ public class App {
             // Read CSV lines and convert to SalesRecord objects
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
                 List<SalesRecord> sales = reader.lines()
+                        .map(String::trim)
+                        .filter(line -> !line.isEmpty())
                         .skip(1) // skip CSV header
                         .map(line -> line.split(","))
-                        .map(arr -> new SalesRecord(
-                                arr[0],        // productName
-                                arr[1],        // category
-                                arr[2],        // date
-                                Integer.parseInt(arr[3]),  // quantity
-                                Double.parseDouble(arr[4]) // price
-                        ))
+                        // protect against malformed rows (should have 5 columns)
+                        .filter(arr -> arr.length >= 5)
+                        .map(arr -> {
+                            String orderId = arr[0].trim();
+                            String product = arr[1].trim();
+                            String category = arr[2].trim();
+                            int quantity = Integer.parseInt(arr[3].trim());
+                            double price = Double.parseDouble(arr[4].trim());
+                            // SalesRecord constructor: (orderId, product, category, quantity, price)
+                            return new SalesRecord(orderId, product, category, quantity, price);
+                        })
                         .collect(Collectors.toList());
 
                 // Create analyzer

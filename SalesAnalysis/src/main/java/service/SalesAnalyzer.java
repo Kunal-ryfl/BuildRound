@@ -3,8 +3,8 @@ package SalesAnalysis.src.main.java.service;
 import SalesAnalysis.src.main.java.model.SalesRecord;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.*;
 
 /**
  * Performs various analysis operations on sales data.
@@ -21,6 +21,7 @@ public class SalesAnalyzer {
 
     /**
      * Calculates total revenue from all sales records.
+     * Revenue = quantity * price for each sale.
      */
     public double getTotalRevenue() {
         return sales.stream()
@@ -29,7 +30,7 @@ public class SalesAnalyzer {
     }
 
     /**
-     * Groups quantity sold by product category.
+     * Groups total quantity sold by product category.
      */
     public Map<String, Integer> getQuantityByCategory() {
         return sales.stream()
@@ -40,7 +41,7 @@ public class SalesAnalyzer {
     }
 
     /**
-     * Calculates revenue for each product.
+     * Calculates total revenue for each product.
      */
     public Map<String, Double> getRevenueByProduct() {
         return sales.stream()
@@ -51,7 +52,7 @@ public class SalesAnalyzer {
     }
 
     /**
-     * Finds the top-selling product by quantity sold.
+     * Finds the top-selling product based on quantity sold.
      */
     public String getTopSellingProduct() {
         return sales.stream()
@@ -67,7 +68,8 @@ public class SalesAnalyzer {
     }
 
     /**
-     * Calculates the average sale value across all records.
+     * Calculates the average sale value across all sales records.
+     * Average = (sum of total revenue of each sale) / number of sales entries.
      */
     public double getAverageSaleValue() {
         return sales.stream()
